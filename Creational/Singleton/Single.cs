@@ -13,6 +13,12 @@ namespace Singleton
         // .NET guarantees thread safety for static initialization
         private static readonly Single _instance = new Single();
 
+        //Stop class user to make a new instance using the constructor. Hence private.
+        private Single()
+        {
+
+        }
+
         public static Single GetInstance()
         {
             return _instance;
